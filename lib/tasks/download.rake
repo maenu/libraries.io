@@ -265,4 +265,14 @@ namespace :download do
   task go_all: :environment do
     PackageManager::Go.import_async
   end
+
+  desc 'Download all SmalltalkHub packages asynchronously'
+  task smalltalk_hub_all: :environment do
+    PackageManager::SmalltalkHub.import_async
+  end
+
+  desc 'Download recent SmalltalkHub packages asynchronously'
+  task smalltalk_hub: :environment do
+    PackageManager::SmalltalkHub.import_recent_async
+  end
 end
